@@ -9,11 +9,28 @@
 3. SPRING BOOT
 
 ---
-## Subindo a aplicação
-1. Abra o CMD nesta pasta e execute o seguinte comando para criar uma imagem docker e rodar o projeto:
+## Subindo a aplicação 
+1. Abra o CMD nesta pasta e execute o seguinte comando para rodar em um container e subir a api:
 ```bash
  docker-compose up --build
 ```
 
-2. Quando a API estiver rodando, a documentação da API vai estar nesta url: 
+## Caso queira buildar o projeto
+1. Rode:
+```bash
+ mvn clean install
+```
+
+2. Abra o CMD nesta pasta e execute o seguinte comando para criar uma imagem docker e subir o container:
+```bash
+ docker build -t task-list .
+
+ docker run -i -p 8082:8082 -t task-list task-list
+```
+
+## Caso queira subir a api pela IDE
+1. Rode a classe StefaniniApplication
+
+# Documentação da API
+1. Quando a API estiver rodando, a documentação da API vai estar nesta url: 
 http://localhost:8082/swagger-ui/index.html
